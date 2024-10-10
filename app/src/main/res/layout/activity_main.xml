@@ -46,6 +46,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/preco_alcool"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Ex: 3.90"
@@ -80,6 +81,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView2">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/preco_gasolina"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Ex: 6.10"

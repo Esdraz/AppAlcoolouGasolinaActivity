@@ -1,6 +1,7 @@
 package com.esdraz.appalcoolougasolina
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,7 @@ class DetalhesActivity : AppCompatActivity() {
     lateinit var textAlcool: TextView
     lateinit var textGasolina: TextView
     lateinit var textResultado: TextView
+    lateinit var btnFechar: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +28,7 @@ class DetalhesActivity : AppCompatActivity() {
         textAlcool = findViewById(R.id.text_alcool)
         textGasolina = findViewById(R.id.text_gasolina)
         textResultado = findViewById(R.id.text_resultado)
+        btnFechar = findViewById(R.id.btn_fechar)
 
         val bundle = intent.extras
         val precoAlcool = bundle?.getDouble("alcool")
@@ -36,5 +39,9 @@ class DetalhesActivity : AppCompatActivity() {
 
         val resultado = bundle?.getString("resultado")
         textResultado.text = resultado
+
+        btnFechar.setOnClickListener {
+            finish()
+        }
     }
 }
